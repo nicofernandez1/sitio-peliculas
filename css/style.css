@@ -295,3 +295,12 @@ footer ul li:hover {
         font-size: 12px;
     }
 }
+
+/* INICIO SESION */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: min(400px, 90%);
+}
