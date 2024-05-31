@@ -1,6 +1,7 @@
 :root {
     --primary: #16161a;
     --secondary: #242629;
+    --secondary-hover: #414449;
     --text: #fffffe;
     --accent: #7f5af0;
     --accent-hover: #684bc2;
@@ -98,7 +99,7 @@ header .link-destacado:hover {
 /* HERO-SECTION */
 
 #hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/fondo.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/fondo-2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -298,9 +299,111 @@ footer ul li:hover {
 
 /* INICIO SESION */
 
-.form {
+#inicio-sesion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--primary);
+    color: var(--text);
+}
+
+#inicio-sesion .form {
     display: flex;
     flex-direction: column;
     gap: 16px;
     width: min(400px, 90%);
+}
+
+#inicio-sesion input {
+    height: 52px;
+    padding-inline: 10px;
+    font-size: 1.115rem;
+    border-radius: 5px;
+}
+
+#inicio-sesion button {
+    background-color: var(--accent);
+    color: var(--text);
+    height: 52px;
+    font-weight: 700;
+    font-size: 1.115rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#inicio-sesion button:hover {
+    background-color: var(--accent-hover);
+}
+
+#inicio-sesion a {
+    background-color: var(--secondary);
+    color: var(--text);
+    padding-block: 15px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.115rem;
+    border-radius: 5px;
+}
+
+#inicio-sesion a:hover {
+    background-color: var(--secondary-hover);
+}
+
+#inicio-sesion h2 {
+    margin-bottom: 15px;
+}
+
+#inicio-sesion input[type=password] {
+    margin-bottom: 15px;
+}
+
+/* API section */
+
+#api-section {
+    background-color: var(--secondary);
+    min-height: 100vh;
+    padding: 122px 0 50px 0;
+}
+
+#api-section .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    width: 75%;
+    margin-inline: auto;
+}
+
+#api-section img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    transition: 0.3s ease;
+    border-radius: 10px;
+}
+
+#api-section img:hover {
+    border: 3px solid var(--text);
+    transform: scale(1.05);
+}
+
+#api-section .search-container {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#btn-search {
+    border: none;
+    background-color: var(--accent);
+    color: var(--text);
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+#search {
+    height: 35px;
+    padding-inline: 10px;
+    border-radius: 5px;
 }
