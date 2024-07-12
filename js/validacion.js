@@ -4,6 +4,7 @@ btn.addEventListener('click', validarDatos)
 
 function validarDatos(event) {
     event.preventDefault()
+    console.log(event)
     
     const usuario = document.getElementById('usuario').value
     const password = document.getElementById('password').value
@@ -18,5 +19,6 @@ function validarDatos(event) {
         return
     }
 
-    form.submit()
+    localStorage.setItem('USUARIO', usuario)
+    window.location.href = './administrador.html'
 }

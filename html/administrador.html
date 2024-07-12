@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAC-Movies</title>
+    <link rel="stylesheet" href="../css/administrador.css">
+    <link rel="icon" href="../img/icono.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="../js/auth.js"></script>
+    <script>
+        isLogged()
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <a href="../index.html"><img src="../img/icono.png" alt="Logo" width="50"></a>
+            <a href="../index.html" class="logo-text">cac-movies</a>
+        </div>
+        <button class="btn btn-mod" onclick="logout()">Cerrar Sesion</button>
+    </header>
+    <main>
+        <section id="administrador">
+            
+            
+            <div class="table-container" id="table-container">
+                <div>
+                    <h1>Mi lista</h1>
+                    <button class="btn btn-mod" id="btn-agregar">+ Añadir Pelicula</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Titulo</th>
+                            <th>Año</th>
+                            <th>Director</th>
+                            <th>Eliminar</th>
+                            <th>Editar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        
+                    </tbody>
+                </table>
+                <div class="display" id="display"></div>
+            </div>
+            
+            
+
+            <dialog class="dialog" id="dialog">
+                <h2>Agregar pelicula</h2>
+                <label>Titulo</label>
+                <input type="text" id="titulo" required>
+                <label>Año</label>
+                <input type="number" id="anio" required>
+                <label>Director</label>
+                <input type="text" id="director" required>
+                <div class="botones">
+                    <button class="btn btn-mod" id="btn-cancelar">Cancelar</button>
+                    <button class="btn" id="btn-enviar">Enviar</button>
+                </div>
+                
+            </dialog>
+        </section>
+    </main>
+
+    <script src="https://kit.fontawesome.com/cdd422707e.js" crossorigin="anonymous"></script>
+    <script src="../js/administrador.js"></script>
+    
+</body>
+</html>

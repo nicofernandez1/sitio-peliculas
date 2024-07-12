@@ -1,0 +1,152 @@
+:root {
+    --primary: #16161a;
+    --secondary: #242629;
+    --secondary-hover: #414449;
+    --text: #fffffe;
+    --accent: #7f5af0;
+    --accent-hover: #684bc2;
+    --paragraph: #94a1b2;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1 {
+    color: var(--text);
+    text-align: center;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    height: 100vh;
+    
+}
+
+.header {
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+    color: var(--text);
+    padding-inline: 25px;
+    width: 100%;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+}
+
+.btn {
+    background-color: hsl(255, 83%, 65%);
+    color: var(--text);
+    font-size: 1.05rem;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    &:hover {
+        background-color: hsl(255, 83%, 55%);
+    }
+}
+
+.btn-mod {
+    background-color: var(--secondary);
+    &:hover {
+        background-color: var(--secondary-hover);
+    }
+}
+
+#administrador {
+    background-color: var(--primary);
+    min-height: calc(100vh - 72px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    
+}
+
+.table-container {
+    max-width: 1000px;
+    flex-grow: 1;
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid var(--primary);
+    color: var(--text);
+    background-color: var(--secondary);
+    width: 100%;
+    text-align: center;
+    
+}
+
+th {
+    background-color: var(--accent);
+}
+
+tr:nth-of-type(2n) {
+    background-color: hsl(216, 6%, 18%);;
+}
+
+th, td {
+    padding: 1rem;
+}
+
+.dialog > * {
+    display: block;
+    width: 100%;
+}
+
+.dialog {
+    padding: 2rem;
+    border-radius: 10px;
+    width: 300px;
+    
+    margin: auto;
+}
+
+.dialog input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--paragraph);
+    margin-bottom: 1rem;
+}
+
+
+.dialog h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+
+.btn-eliminar, .btn-editar {
+    cursor: pointer;
+}
+
+.display {
+    font-size: 1.5rem;
+    color: var(--text);
+    text-align: center;
+    padding-top: 15px;
+}
